@@ -1,0 +1,10 @@
+project: pyaxmlparser
+target: fuzz-apk
+testsuite:
+    - file://mayhem/testsuite
+
+cmds:
+  - cmd: /src/mayhem/fuzz_apk.py
+    libfuzzer: true
+    timeout: 12
+    max_length: 5000
